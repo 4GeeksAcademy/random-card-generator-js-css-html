@@ -9,21 +9,42 @@ body {
   margin-top: 50px;
   height: 400px;
   border-radius: 10px;
-}
+  &:before {
+    position: absolute;
+    top: 0;
+    left: 10px;
+    font-size: 4rem;
+  }
 
-.top-icon {
-  position: absolute;
-  top: 0;
-  left: 10px;
-  font-size: 3rem;
-}
+  &:after {
+    position: absolute;
+    bottom: 0;
+    right: 10px;
+    font-size: 4rem;
+    transform: rotate(180deg);
+  }
 
-.bottom-icon {
-  position: absolute;
-  bottom: 0;
-  right: 10px;
-  font-size: 3rem;
-  transform: rotate(180deg);
+  &.diamond:before,
+  &.diamond:after {
+    content: "♦";
+    color: red;
+  }
+
+  &.heart:before,
+  &.heart:after {
+    content: "♥";
+    color: red;
+  }
+
+  &.spade:before,
+  &.spade:after {
+    content: "♠";
+  }
+
+  &.club:before,
+  &.club:after {
+    content: "♣";
+  }
 }
 
 .card-number {
